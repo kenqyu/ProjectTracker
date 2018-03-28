@@ -1,0 +1,23 @@
+body {
+  background: #EDEDED;
+}
+
+.auth {
+  h1 {
+    font-size: 31px;
+    margin-bottom: 27px;
+  }
+  min-height: 100%;
+  p.register {
+    margin-top: 10px;
+  }
+  p.help-block {
+    text-align: justify;
+  }
+  .mobile-reverse {
+    @media screen and (max-width: 991px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}

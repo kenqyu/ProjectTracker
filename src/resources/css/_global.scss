@@ -1,0 +1,121 @@
+@import "variables";
+
+html {
+  height: 100%;
+  body {
+    min-height: 100%;
+    padding-bottom: 25px;
+    &:after {
+      content: "";
+      display: block;
+      top: 100%;
+      left: 100%;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+      z-index: 100000;
+    }
+  }
+}
+
+/** {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}*/
+
+.btn,
+.modal-content,
+.form-control,
+.badge,
+.input-group-addon {
+  border-radius: 0 !important;
+}
+
+a {
+  text-decoration: none;
+  &:link, &:visited, &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
+
+.modal-header {
+  font-size: 25px;
+  padding: 27px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.modal-body {
+  padding: 27px;
+}
+
+a.btn-primary, button.btn-primary, input.btn-primary, span.btn-primary {
+  color: #fff;
+  background-color: $global-green;
+  border: 0;
+
+  &:hover, &:focus, &:active, &active:hover {
+    background-color: darken($global-green, 10%) !important;
+    border: 0;
+    outline: none !important;
+  }
+}
+
+a.btn-danger, button.btn-danger, input.btn-danger, span.btn-danger {
+  border: 0;
+}
+
+a.btn-info, button.btn-info, input.btn-info, span.btn-info {
+  color: #000;
+  background-color: $global-gray !important;
+  border-color: $global-gray !important;
+  &:hover, &:focus, &:active, &active:hover {
+    color: #000 !important;
+    background-color: $global-dark-gray-hover !important;
+    border-color: $global-dark-gray-hover !important;
+    outline: none !important;
+  }
+}
+
+.grid-view {
+  th {
+    a {
+      color: $global-green;
+    }
+  }
+}
+
+.staging_server {
+  background-color: #f7e4e1;
+  color: #0a0a0a;
+  text-align: center;
+  padding: 15px 0;
+  h1 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.swal2-icon.swal2-warning {
+  border-color: #f27474;
+  color: #f27474;
+}
+
+.fake-label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  &:before {
+    content: ' ';
+    display: inline-block;
+  }
+}

@@ -1,0 +1,176 @@
+@import "../variables";
+
+.report {
+  > .header {
+    margin-bottom: 10px;
+
+    .report_selector {
+      position: relative;
+      .current {
+        font-size: 28px;
+        font-weight: bold;
+        position: relative;
+        padding-left: 30px;
+        &:after {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all 200ms ease-in-out;
+          content: "\f054";
+          display: inline-block;
+          font-size: 20px;
+          font-family: FontAwesome;
+        }
+      }
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        box-shadow: 0 1px 3px #555555;
+        z-index: 1;
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          li {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            &:not(:last-child) {
+              border-bottom: 1px solid #ccc;
+            }
+            a {
+              padding: 10px;
+              font-size: 22px;
+              display: inline-block;
+              width: 100%;
+              color: #000000;
+              &.create_report {
+                font-size: 16px;
+                background-color: #17a2b8;
+                color: #ffffff;
+                text-align: center;
+                &:hover {
+                  background: darken(#17a2b8, 10%);
+                }
+              }
+              &:hover {
+                background: #ddd;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        .current {
+          &:after {
+            transform: translateY(-50%) rotate(90deg);
+          }
+        }
+        .dropdown {
+          display: block;
+        }
+      }
+    }
+    #date_range {
+      margin-top: 10px;
+    }
+
+    .processing_unit,
+    .total_jobs {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .processing_unit {
+      margin-top: 0;
+    }
+  }
+  .report_row {
+    margin-bottom: 20px;
+    .row_title {
+      background: $global-green;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      padding: 5px;
+    }
+    .columns {
+      display: flex;
+      flex-direction: row;
+      .column {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        .column_title {
+          background: $global-green;
+          color: #fff;
+          text-align: center;
+          font-size: 14px;
+          padding: 5px;
+          flex: 0 1 auto;
+        }
+        .content {
+          flex: 1 1 auto;
+          padding-top: 15px;
+
+          h3 {
+            text-align: center;
+          }
+          textarea {
+            height: 100%;
+          }
+
+          .chart {
+            width: 100%;
+          }
+
+          .legend {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .item {
+              margin-right: 10px;
+              font-size: 15px;
+              white-space: nowrap;
+              span {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.daterangepicker {
+  .cancelBtn {
+    display: none !important;
+  }
+}
+
+@media print {
+  header {
+    display: none;
+  }
+  .report {
+    .row_title {
+      background: $global-green;
+    }
+    .column_title {
+      background: $global-green;
+    }
+    .actions,
+    .report_selector {
+      display: none;
+    }
+  }
+}

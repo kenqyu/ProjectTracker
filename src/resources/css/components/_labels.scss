@@ -1,0 +1,6 @@
+@import "../variables";
+.label {
+  &.label-sce {
+    background: $global-green;
+  }
+}

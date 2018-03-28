@@ -1,0 +1,162 @@
+.field-createjobform-files {
+  .item {
+    .delete {
+      display: none;
+    }
+    &.filled {
+      .delete {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+#create_new_job {
+  .request_types {
+    .holder {
+      label {
+        display: block;
+        font-weight: normal;
+      }
+    }
+  }
+  .additional_steps {
+    .title {
+      padding: 10px;
+      background-color: #fff3cd;
+      border-color: #ffeeba;
+      color: #856404;
+    }
+
+    label {
+      .required {
+        color: #8b0000;
+      }
+    }
+    .type_checkbox {
+      label {
+        font-weight: normal;
+        input {
+          margin-right: 5px;
+        }
+      }
+    }
+    .type_checkbox_list {
+      div {
+        label {
+          font-weight: normal;
+          display: block;
+        }
+      }
+    }
+    #links {
+      .row {
+        margin-bottom: 10px;
+      }
+    }
+    .radio {
+      label {
+        display: block;
+      }
+    }
+    .cwa {
+      table {
+        td:last-child {
+          padding: 0;
+          a.delete {
+            display: inline-block;
+            height: 100%;
+            padding: 8px 16px;
+
+            background-color: #f8d7da;
+            color: #721c24;
+            text-decoration: none;
+
+            &:hover {
+              background: darken(#f8d7da, 10%);
+            }
+          }
+        }
+        tr:last-child {
+          td {
+            border-bottom: 1px solid #ddd;
+          }
+        }
+      }
+    }
+    .cost-centers {
+      table {
+        td:last-child {
+          padding: 0;
+          a.delete {
+            display: inline-block;
+            height: 100%;
+            padding: 8px 16px;
+
+            background-color: #f8d7da;
+            color: #721c24;
+            text-decoration: none;
+
+            &:hover {
+              background: darken(#f8d7da, 10%);
+            }
+          }
+        }
+        tr:last-child {
+          td {
+            border-bottom: 1px solid #ddd;
+          }
+        }
+      }
+    }
+    .cms_links {
+      #add_link {
+        margin-bottom: 5px;
+      }
+      a.delete {
+        display: inline-block;
+        height: 100%;
+        padding: 8px 16px;
+
+        background-color: #f8d7da;
+        color: #721c24;
+        text-decoration: none;
+
+        &:hover {
+          background: darken(#f8d7da, 10%);
+        }
+      }
+      table {
+        tr {
+          td {
+            padding-top: 0;
+            padding-bottom: 0;
+            &:first-child {
+              padding-left: 0;
+            }
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .back {
+    display: none;
+  }
+  .form-group {
+    .error {
+      display: none;
+    }
+    &.has-error {
+      .error {
+        display: block;
+      }
+    }
+  }
+  .warning {
+    margin-top: 8px;
+    color: #ff0000;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../variables";
+
+.vertical-tabs {
+  .nav-tabs {
+    border-bottom: 0;
+    li {
+      display: block;
+      float: none;
+      margin-bottom: 2px;
+      a {
+        display: block;
+        border: 0;
+        background: $global-gray;
+        color: #000;
+        border-radius: 0;
+        &:hover {
+          background: darken($global-gray, 10%);
+        }
+      }
+      &.active {
+        a {
+          cursor: pointer;
+          background: $global-green;
+          color: #ffffff;
+          border: 0;
+          &:hover {
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}

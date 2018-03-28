@@ -1,0 +1,32 @@
+@import "../variables";
+
+header {
+  margin-bottom: 15px;
+
+  &.simple {
+    background: #fff;
+    padding: 10px 0;
+  }
+  .top {
+    padding: 10px 0;
+    h1 {
+      font-size: 25px;
+      margin-top: 16px;
+    }
+  }
+
+  .nav {
+    background: $global-gray;
+    padding: 0 15px;
+    margin: 10px -15px;
+    > li {
+      display: inline-block;
+      a {
+        color: #000;
+      }
+    }
+  }
+  .notification-badge {
+    background: green;
+  }
+}
