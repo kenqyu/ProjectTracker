@@ -1,0 +1,50 @@
+version: '3'
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www/html
+      - ./docker/config/nginx/site.conf:/etc/nginx/conf.d/site.conf
+    links:
+      - php
+    depends_on:
+      - db
+  php:
+    build: ./docker/config/php
+    volumes:
+      - ./src:/var/www/html
+    links:
+      - db
+      - graphs
+      - mailhog
+    environment:
+      DB_DSN: "mysql:host=db;dbname=yii"
+      DB_PASSWORD: password
+      MEMCACHE_HOST: memcache
+      SMTP_HOST: mailhog
+      SMTP_PORT: 1025
+      SMTP_USERNAME: ''
+      SMTP_PASSWORD: ''
+      SMTP_ENCRYPTION: ''
+  db:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/database:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: yii
+      MYSQL_ROOT_PASSWORD: password
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+  memcache:
+    image: memcached:latest
+  graphs:
+    image: onsdigital/highcharts-export-node:latest
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - 8025:8025

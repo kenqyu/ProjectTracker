@@ -1,0 +1,71 @@
+{
+  "name": "tyscreative/sce_tracker",
+  "type": "project",
+  "license": "proprietary",
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.0",
+    "yiisoft/yii2": "2.0.*",
+    "yiisoft/yii2-bootstrap": "2.0.*",
+    "yiisoft/yii2-swiftmailer": "2.0.*",
+    "vlucas/phpdotenv": "v2.2.1",
+    "skinka/type-enum": "1.0.1",
+    "tightenco/collect": "5.4.*",
+    "pusher/pusher-php-server": "^2.4",
+    "2amigos/yii2-date-picker-widget": "~1.0",
+    "nex/yii2-chosen": "v1.0",
+    "kartik-v/yii2-grid": "^3.1",
+    "guzzlehttp/guzzle": "^6.2",
+    "league/csv": "^8.0",
+    "danielstjules/stringy": "~2.3",
+    "kartik-v/yii2-widget-activeform": "v1.4.8",
+    "mito/yii2-sentry": "1.0.2",
+    "phpoffice/phpexcel": "^1.8",
+    "npm-asset/moment": "2.19.*",
+    "bower-asset/fontawesome": "4.6.3",
+    "bower-asset/handlebars": "4.0.*",
+    "bower-asset/blueimp-file-upload": "9.12.*",
+    "bower-asset/jquery.scrollbar": "0.2.*",
+    "bower-asset/malihu-custom-scrollbar-plugin": "3.1.*",
+    "bower-asset/typeahead.js": "^0.11.1",
+    "bower-asset/axios": "^0.16.1",
+    "2amigos/yii2-date-time-picker-widget": "^1.0",
+    "bower-asset/sortablejs": "^1.5",
+    "bower-asset/autosize": "^3.0",
+    "bower-asset/es6-promise": "^4.0",
+    "bower-asset/highcharts": "^5.0",
+    "npm-asset/sweetalert2": "^6.6",
+    "cocur/slugify": "^2.5",
+    "npm-asset/at.js": "^1.5",
+    "npm-asset/jquery.caret": "^0.3.1",
+    "ramsey/uuid": "^3.7",
+    "npm-asset/bootstrap-daterangepicker": "^2.1",
+    "szymach/c-pchart": "^3.0",
+    "dompdf/dompdf": "^0.8.0",
+    "alex-bond/yii2-redactor": "~3.0.0"
+  },
+  "require-dev": {
+    "yiisoft/yii2-debug": "2.0.*",
+    "yiisoft/yii2-gii": "2.0.*"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "vendor-dir": "src/vendor"
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:Alex-Bond/yii2-redactor-2"
+    }
+  ]
+}
